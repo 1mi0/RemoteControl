@@ -3,8 +3,8 @@
 
 int main()
 {
-	std::unique_ptr<Application> application = std::unique_ptr<Application>(new Application);
-	application->run();
+	Application app;
+	app.run();
 
 	std::cin.get();
 	return 0;

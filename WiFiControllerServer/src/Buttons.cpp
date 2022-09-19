@@ -46,7 +46,7 @@ std::string* Buttons::stringifyButton(byte button)
 	Button* bButton = findButton(button);
 	if (bButton == nullptr)
 	{
-		return &std::string("");
+		return new std::string("");
 	}
 
 	return stringifyButton(*bButton);
@@ -86,6 +86,7 @@ bool Buttons::ExecuteButton(byte button)
 	{
 		return false;
 	}
+	std::cout << "Executing button" << std::endl;
 
 	m_Input.type = INPUT_KEYBOARD;
 	m_Input.ki.wVk = bButton->vk;

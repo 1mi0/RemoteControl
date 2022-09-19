@@ -29,6 +29,3 @@
 
 // thread pool
 #include <ctpl.h>
-
-#include "sockets/Server.h"
-#include "sockets/SimplePacket.h"

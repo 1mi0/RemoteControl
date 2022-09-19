@@ -1,8 +1,7 @@
 #pragma once
 #include "pch.h"
-
-template<typename T>
-class LockQueue;
+#include "sockets/SimplePacket.h"
+#include "sockets/Server.h"
 
 class Application
 {

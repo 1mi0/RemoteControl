@@ -1,8 +1,8 @@
-#include "Application.h"
 #include "pch.h"
+#include "Application.h"
+#include "sockets/Server.h"
 
-Application::Application()
-    : m_Server(nullptr), m_Pool(nullptr), m_PacketQueue(nullptr) {
+Application::Application() {
   // Startup WinSock
   if (Server::setupWinSock() == SOCKET_ERROR) {
     std::cout << "Could not start up WinSock!";
@@ -28,6 +28,7 @@ void Application::run() {
 
   while (true) {
     m_Mutex.lock();
+    std::this_thread::sleep_for(std::chrono::milliseconds(1));
     if (!m_PacketQueue->empty()) {
       managePacket(m_PacketQueue->front());
       m_PacketQueue->pop();

@@ -4,7 +4,7 @@
 
 struct Button
 {
-	DWORD vk;
+	WORD vk;
 	byte id;
 };
 
