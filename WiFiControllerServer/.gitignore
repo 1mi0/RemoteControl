@@ -1,0 +1,5 @@
+/msvc/.vs
+/msvc/*.user
+/msvc/x64
+/msvc/Debug
+/msvc/Release
